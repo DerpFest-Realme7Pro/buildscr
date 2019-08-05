@@ -11,7 +11,7 @@ git clone https://github.com/derpfest-sanders/build-scripts.git -b master build-
 ```
 
 ```bash
-. build-scripts/derpscript.sh
+. buildscr/derps.sh
 ```
 
 
