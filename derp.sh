@@ -1,7 +1,7 @@
 rm -rf device/motorola/sanders
 rm -rf vendor/motorola/sanders
 rm -rf kernel/motorola/msm8953
-git clone https://github.com/marshmello61/derp_device_motorola_sanders.git -b pie device/motorola/sanders
+git clone https://github.com/marshmello61/derp_device_motorola_sanders.git -b piet device/motorola/sanders
 git clone https://github.com/evolution-x-devices/vendor_motorola_sanders.git -b pie vendor/motorola/sanders
 git clone https://github.com/evolution-x-devices/kernel_motorola_sanders.git -b pie kernel/motorola/msm8953
 rm -rf packages/apps/Updater
