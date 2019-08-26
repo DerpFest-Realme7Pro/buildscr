@@ -1,9 +1,9 @@
 rm -rf device/motorola/sanders
 rm -rf vendor/motorola/sanders
 rm -rf kernel/motorola/msm8953
-git clone https://github.com/marshmello61/Derp-ify.git -b arcrctr device/motorola/sanders
-git clone https://github.com/marshmello61/vendor.git -b pie vendor/motorola/sanders
-git clone https://github.com/sai4041412/kernel_motorola_sanders.git -b 9.0 kernel/motorola/msm8953
+git clone https://github.com/marshmello61/Derp-ify.git -b ngapps device/motorola/sanders
+git clone https://github.com/Evolution-X-Devices/vendor_motorola_sanders.git -b pie vendor/motorola/sanders
+git clone https://github.com/sai4041412/kernel_motorola_sanders.git -b stagging3 kernel/motorola/msm8953
 rm -rf packages/apps/Updater
 rm -rf packages/apps/Camera2
 rm -rf packages/apps/SnapdragonCamera2
