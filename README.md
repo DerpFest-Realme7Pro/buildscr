@@ -7,11 +7,11 @@
 #### Run the following command to sync all files for DerpFest
 
 ```bash
-git clone https://github.com/derpfest-sanders/build-scripts.git -b master build-scripts
+git clone https://github.com/derpfest-sanders/build-scripts
 ```
 
 ```bash
-. buildscr/derps.sh
+. buildscr/script.sh
 ```
 
 
