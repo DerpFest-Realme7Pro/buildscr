@@ -11,7 +11,7 @@ git clone https://github.com/derpfest-sanders/buildscr
 ```
 
 ```bash
-. buildscr/script.sh
+. buildscr/tann.sh
 ```
 
 
