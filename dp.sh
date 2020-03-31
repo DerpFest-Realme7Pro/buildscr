@@ -1,7 +1,8 @@
 #!/bin/bash
+rm -rf one two three four five six seven eight
 
 # Abort on errors
-#set -e
+set -e
 
 BUILD_START=$(date +"%s")
 blue='\033[0;34m'
@@ -14,8 +15,44 @@ nocol='\033[0m'
 # Doing Sanders-ify
 
 
+echo "1. Pick commits of frameworks/base"
+echo "2. Pick commits of DerpQuest"
+echo "3. Pick commits of build/make"
+echo "4. Pick commits of vendor/overlay"
+echo "5. Pick commits of Settings"
+echo "6. Pick commits of vendor/pixelstyle"
+echo "7. Pick commits of vendor/aosip"
+echo "8. Pick commits of OmniStyle"
+echo "9. Pick commits of every repo above"
+read -e -p "Select anyone from above " ans;
+
+case $ans in
+   1)
+	mkdir one;;
+   2)
+	mkdir two;;
+   3)
+	mkdir three;;
+   4)
+	mkdir four;;
+   5)
+	mkdir five;;
+   6)
+	mkdir six;;
+   7)
+	mkdir seven;;
+   8)
+	mkdir eight;;
+   9)
+	mkdir one two three four five six seven eight;;
+esac
+
+
+
 ## fw/base
-echo "$blue// Picking commits of frameworks/base //$nocol"
+if [ -e one ]
+then
+echo -e "$blue// Picking commits of frameworks/base //$nocol"
 cd frameworks/base
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base ten
 git cherry-pick b4b044ddf423bcf0f9780cc3ae885e95dc81cede
@@ -23,10 +60,13 @@ git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:te
 cd ../..
 echo " "
 echo " "
-
+rm -rf one
+fi
 
 ## DerpQuest
-echo "$blue// Picking commits of DerpQuest //$nocol"
+if [ -e two ]
+then
+echo -e "$blue// Picking commits of DerpQuest //$nocol"
 cd pac*/apps/DerpQuest
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest ten
 git cherry-pick a1cd7e0e9f20247e494763b742daa1966d6c4f02
@@ -34,10 +74,13 @@ git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest
 cd ../../..
 echo " "
 echo " "
-
+rm -rf two
+fi
 
 ## build/make
-echo "$blue// Picking commits of build //$nocol"
+if [ -e three ]
+then
+echo -e "$blue// Picking commits of build //$nocol"
 cd build/make
 git fetch https://github.com/DerpFest-Sanders/platform_build mine
 git cherry-pick fea68116eb2232e376d6a7d90af177b1f6bc7f0f
@@ -45,10 +88,13 @@ git push -f https://github.com/DerpFest-Sanders/platform_build HEAD:ten2
 cd ../..
 echo " "
 echo " "
-
+rm -rf three
+fi
 
 ## vendor/overlay
-echo "$blue// Picking commits of vendor/overlay //$nocol"
+if [ -e four ]
+then
+echo -e "$blue// Picking commits of vendor/overlay //$nocol"
 cd vendor/overlay
 git fetch https://github.com/DerpFest-Sanders/platform_vendor_overlay ten
 git cherry-pick 07cc4691d1f8e18bb48e256caa1da444b3c0ccb7
@@ -56,10 +102,13 @@ git push -f https://github.com/DerpFest-Sanders/platform_vendor_overlay HEAD:ten
 cd ../..
 echo " "
 echo " "
-
+rm -rf four
+fi
 
 ## Settings
-echo "$blue// Picking commits of Settings //$nocol"
+if [ -e five ]
+then
+echo -e "$blue// Picking commits of Settings //$nocol"
 cd pac*/apps/Settings
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_Settings ten
 git cherry-pick 185d989450e8a5da0ca164e3e08f3bdce5fc0d75
@@ -68,10 +117,13 @@ git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_Settings 
 cd ../../..
 echo " "
 echo " "
-
+rm -rf five
+fi
 
 ## vendor/pixelstyle
-echo "$blue// Picking commits of vendor/pixelstyle //$nocol"
+if [ -e six ]
+then
+echo -e "$blue// Picking commits of vendor/pixelstyle //$nocol"
 cd vendor/pixelstyle
 git fetch https://github.com/DerpFest-Sanders/platform_vendor_pixelstyle ten
 git cherry-pick 92faa55d29ccb29b147cab1e0a42b99b2929b002
@@ -79,10 +131,13 @@ git push -f https://github.com/DerpFest-Sanders/platform_vendor_pixelstyle HEAD:
 cd ../..
 echo " "
 echo " "
-
+rm -rf six
+fi
 
 ## vendor/aosip
-echo "$blue// Picking commits of vendor/aosip //$nocol"
+if [ -e seven ]
+then
+echo -e "$blue// Picking commits of vendor/aosip //$nocol"
 cd vendor/aosip
 git fetch https://github.com/DerpFest-Sanders/platform_vendor_aosip ten
 git cherry-pick da46abff6be7fdba01a5568d572a576a8f428fab
@@ -90,10 +145,13 @@ git push -f https://github.com/DerpFest-Sanders/platform_vendor_aosip HEAD:ten2
 cd ../..
 echo " "
 echo " "
-
+rm -rf seven
+fi
 
 ## OmniStyle
-echo "$blue// Picking commits of OmniStyle //$nocol"
+if [ -e eight ]
+then
+echo -e "$blue// Picking commits of OmniStyle //$nocol"
 cd pac*/apps/OmniStyle
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_OmniStyle ten
 git cherry-pick 568431bd327180c0c7a9147a649c0bf6af270b73
@@ -101,8 +159,9 @@ git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_OmniStyle
 cd ../../..
 echo " "
 echo " "
-
+rm -rf eight
+fi
 
 
 echo " "
-echo "$yellow// Picked stuffs from DerpFest-Sanders in $(($DIFF / 60)) minute(s) and $(($DIFF % 60)) seconds //$nocol"
+echo -e "$cyan// Picked stuffs from DerpFest-Sanders //$nocol"
