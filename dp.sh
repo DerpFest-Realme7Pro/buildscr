@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf one two three four five six seven eight
+rm -rf one two three four five six seven eight nine
 
 # Abort on errors
 set -e
@@ -23,7 +23,8 @@ echo "5. Pick commits of Settings"
 echo "6. Pick commits of vendor/pixelstyle"
 echo "7. Pick commits of vendor/aosip"
 echo "8. Pick commits of OmniStyle"
-echo "9. Pick commits of every repo above"
+echo "9. Import FaceUnlock feature"
+echo "10. Pick commits of every repo above"
 read -e -p "Select anyone from above " ans;
 
 case $ans in
@@ -44,7 +45,9 @@ case $ans in
    8)
 	mkdir eight;;
    9)
-	mkdir one two three four five six seven eight;;
+	mkdir nine;;
+   10)
+	mkdir one two three four five six seven eight nine;;
 esac
 
 
@@ -162,6 +165,30 @@ echo " "
 rm -rf eight
 fi
 
+# FaceUnlock
+if [ -e nine ]
+then
+echo -e "$blue// Importing Face Unlock //$nocol"
+git clone https://github.com/PixelExperience/external_motorola_faceunlock -b ten external/motorola/faceunlock
+cd vendor/aosip
+git fetch https://github.com/DerpFest-Sanders/platform_vendor_aosip face
+git cherry-pick 28bee9a51b7510486781818496c647f3a5296488
+git push -f https://github.com/DerpFest-Sanders/platform_vendor_aosip HEAD:ten2
+cd ../..
+cd pac*/apps/Settings
+git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_Settings face
+git cherry-pick a9990f20e99d3e91b9c48605439c421172cba531
+git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_Settings HEAD:ten2
+cd ../../..
+cd frameworks/base
+git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base face
+git cherry-pick 0a1e4cd1c941918d825c0ea53c36e6557fd0f1ae
+git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
+cd ../..
+echo " "
+echo " "
+rm -rf nine
+fi
 
 echo " "
 echo -e "$cyan// Picked stuffs from DerpFest-Sanders //$nocol"
