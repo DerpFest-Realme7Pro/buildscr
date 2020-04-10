@@ -58,7 +58,9 @@ then
 echo -e "$blue// Picking commits of frameworks/base //$nocol"
 cd frameworks/base
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base ten
-git cherry-pick b4b044ddf423bcf0f9780cc3ae885e95dc81cede
+git cherry-pick 84aa0d0ab3db5e76acec767a6f9facb5e67b4ff8
+git cherry-pick 3d9ac15af665c4f8cf5fab12e49105d60886e432
+git cherry-pick 8b793a3a4dd556ef4b184dd602b8e75874413a8a
 git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
 cd ../..
 echo " "
@@ -129,7 +131,7 @@ then
 echo -e "$blue// Picking commits of vendor/pixelstyle //$nocol"
 cd vendor/pixelstyle
 git fetch https://github.com/DerpFest-Sanders/platform_vendor_pixelstyle ten
-git cherry-pick 92faa55d29ccb29b147cab1e0a42b99b2929b002
+git cherry-pick 0d0c70bd2f392bdef6ff8b6ef584832932bd01e7
 git push -f https://github.com/DerpFest-Sanders/platform_vendor_pixelstyle HEAD:ten2
 cd ../..
 echo " "
@@ -143,7 +145,7 @@ then
 echo -e "$blue// Picking commits of vendor/aosip //$nocol"
 cd vendor/aosip
 git fetch https://github.com/DerpFest-Sanders/platform_vendor_aosip ten
-git cherry-pick da46abff6be7fdba01a5568d572a576a8f428fab
+git cherry-pick 3f1d31a4219390b9b09f8fab33308c89e0db4d0b
 git push -f https://github.com/DerpFest-Sanders/platform_vendor_aosip HEAD:ten2
 cd ../..
 echo " "
@@ -169,20 +171,21 @@ fi
 if [ -e nine ]
 then
 echo -e "$blue// Importing Face Unlock //$nocol"
+rm -rf external/motorola/faceunlock
 git clone https://github.com/PixelExperience/external_motorola_faceunlock -b ten external/motorola/faceunlock
 cd vendor/aosip
 git fetch https://github.com/DerpFest-Sanders/platform_vendor_aosip face
-git cherry-pick 28bee9a51b7510486781818496c647f3a5296488
+git cherry-pick 300b9fa1bcdca6f4755994922b3205d94d25704b
 git push -f https://github.com/DerpFest-Sanders/platform_vendor_aosip HEAD:ten2
 cd ../..
 cd pac*/apps/Settings
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_Settings face
-git cherry-pick a9990f20e99d3e91b9c48605439c421172cba531
+git cherry-pick 9341795c8b2eb4b292a7f12ccb473c2c47b791e1
 git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_Settings HEAD:ten2
 cd ../../..
 cd frameworks/base
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base face
-git cherry-pick 0a1e4cd1c941918d825c0ea53c36e6557fd0f1ae
+git cherry-pick c8113334677c308fb675113bd6b5e2a71b90da39
 git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
 cd ../..
 echo " "
