@@ -60,7 +60,6 @@ cd frameworks/base
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base ten
 git cherry-pick 84aa0d0ab3db5e76acec767a6f9facb5e67b4ff8
 git cherry-pick 3d9ac15af665c4f8cf5fab12e49105d60886e432
-git cherry-pick 8b793a3a4dd556ef4b184dd602b8e75874413a8a
 git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
 cd ../..
 echo " "
@@ -74,7 +73,7 @@ then
 echo -e "$blue// Picking commits of DerpQuest //$nocol"
 cd pac*/apps/DerpQuest
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest ten
-git cherry-pick a1cd7e0e9f20247e494763b742daa1966d6c4f02
+git cherry-pick c6aaf959e5bc0fc8331311f95a9259f39b8f6964
 git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest HEAD:ten2
 cd ../../..
 echo " "
@@ -102,7 +101,9 @@ then
 echo -e "$blue// Picking commits of vendor/overlay //$nocol"
 cd vendor/overlay
 git fetch https://github.com/DerpFest-Sanders/platform_vendor_overlay ten
-git cherry-pick 07cc4691d1f8e18bb48e256caa1da444b3c0ccb7
+git cherry-pick 87ddd7f9e38a148669d79bea13b86b5a791a654d
+git cherry-pick e623f85704f2c0067dd9959e4767a2a606250db2
+git cherry-pick 37785210ad3cbad257168253ae6e82945a903fab
 git push -f https://github.com/DerpFest-Sanders/platform_vendor_overlay HEAD:ten2
 cd ../..
 echo " "
@@ -185,7 +186,10 @@ git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_Settings 
 cd ../../..
 cd frameworks/base
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base face
-git cherry-pick c8113334677c308fb675113bd6b5e2a71b90da39
+git cherry-pick 48a251855a7ba1105e0e77412ed8fa3c815e829a
+git cherry-pick 1e25b95134175d3d730a538a3bd3ea64dbe2f929
+git cherry-pick f062a566f0be54902c4c97b30b97d4001bcac9b9
+git cherry-pick fb894143c2266ce15259a69f62851b289e65955a
 git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
 cd ../..
 echo " "
