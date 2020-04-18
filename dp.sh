@@ -11,6 +11,18 @@ yellow='\033[0;33m'
 red='\033[0;31m'
 nocol='\033[0m'
 
+read -e -p "Do you want to sync source?;[y/n] " ans0;
+
+case $ans0 in
+   y|Y)
+        echo -e "$blue// Syncing DerpFest Source //$nocol"
+        repo init -u git://github.com/DerpLab/platform_manifest.git -b ten
+	repo sync --current-branch --no-tags --no-clone-bundle --optimized-fetch --force-sync -j$(nproc --all) --quiet;;
+   n|N)
+	echo -e "$yellow// Skipping syncing source //$nocol";;
+esac
+echo " "
+echo " "
 
 # Doing Sanders-ify
 
@@ -25,7 +37,7 @@ echo "7. Pick commits of vendor/aosip"
 echo "8. Pick commits of OmniStyle"
 echo "9. Import FaceUnlock feature"
 echo "10. Pick commits of every repo above"
-read -e -p "Select anyone from above " ans;
+read -e -p "Select anyone from above: " ans;
 
 case $ans in
    1)
