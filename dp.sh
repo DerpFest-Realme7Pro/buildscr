@@ -85,7 +85,7 @@ then
 echo -e "$blue// Picking commits of DerpQuest //$nocol"
 cd pac*/apps/DerpQuest
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest ten
-git cherry-pick c6aaf959e5bc0fc8331311f95a9259f39b8f6964
+git cherry-pick 0d93d4fd14de1f1ae05c50d48e3838e3a1eb03bb
 git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest HEAD:ten2
 cd ../../..
 echo " "
@@ -113,9 +113,8 @@ then
 echo -e "$blue// Picking commits of vendor/overlay //$nocol"
 cd vendor/overlay
 git fetch https://github.com/DerpFest-Sanders/platform_vendor_overlay ten
-git cherry-pick 87ddd7f9e38a148669d79bea13b86b5a791a654d
-git cherry-pick e623f85704f2c0067dd9959e4767a2a606250db2
-git cherry-pick 37785210ad3cbad257168253ae6e82945a903fab
+git cherry-pick c425885cbeb5d9c9e21694aa351e5b6a133efe04
+git cherry-pick 5d8a1215c40bbc2b95c393e6d02735eb03487583
 git push -f https://github.com/DerpFest-Sanders/platform_vendor_overlay HEAD:ten2
 cd ../..
 echo " "
@@ -184,8 +183,9 @@ fi
 if [ -e nine ]
 then
 echo -e "$blue// Importing Face Unlock //$nocol"
-rm -rf external/motorola/faceunlock
-git clone https://github.com/PixelExperience/external_motorola_faceunlock -b ten external/motorola/faceunlock
+rm -rf external/motorola/faceunlock && cd && cp -r faceunlock dp/external/motorola/faceunlock
+#git clone https://github.com/PixelExperience/external_motorola_faceunlock -b ten external/motorola/faceunlock
+cd dp
 cd vendor/aosip
 git fetch https://github.com/DerpFest-Sanders/platform_vendor_aosip face
 git cherry-pick 300b9fa1bcdca6f4755994922b3205d94d25704b
@@ -199,9 +199,6 @@ cd ../../..
 cd frameworks/base
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base face
 git cherry-pick 48a251855a7ba1105e0e77412ed8fa3c815e829a
-git cherry-pick 1e25b95134175d3d730a538a3bd3ea64dbe2f929
-git cherry-pick f062a566f0be54902c4c97b30b97d4001bcac9b9
-git cherry-pick fb894143c2266ce15259a69f62851b289e65955a
 git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
 cd ../..
 echo " "
