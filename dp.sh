@@ -70,8 +70,9 @@ then
 echo -e "$blue// Picking commits of frameworks/base //$nocol"
 cd frameworks/base
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base ten
-git cherry-pick 84aa0d0ab3db5e76acec767a6f9facb5e67b4ff8
-git cherry-pick 3d9ac15af665c4f8cf5fab12e49105d60886e432
+git cherry-pick 96d788602d2894c158c529dba800fa00e751df29
+git cherry-pick 8135d0a9479af030d36ce21ac6a34a7d13b11cfa
+git cherry-pick 541ae8cd9b1f23f4a40a007af775c7c801dd44d1
 git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
 cd ../..
 echo " "
@@ -85,7 +86,8 @@ then
 echo -e "$blue// Picking commits of DerpQuest //$nocol"
 cd pac*/apps/DerpQuest
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest ten
-git cherry-pick 0d93d4fd14de1f1ae05c50d48e3838e3a1eb03bb
+git cherry-pick d5d2fc43d599913e8efc4b2825c47f6084a0f2a4
+git cherry-pick 9ee686840dee7a16a5ff52ec9df77acba21d0826
 git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest HEAD:ten2
 cd ../../..
 echo " "
@@ -183,7 +185,15 @@ fi
 if [ -e nine ]
 then
 echo -e "$blue// Importing Face Unlock //$nocol"
-rm -rf external/motorola/faceunlock && cd && cp -r faceunlock dp/external/motorola/faceunlock
+rm -rf external/motorola/faceunlock
+cd external
+if [ -e motorola ]
+then
+echo " "
+else
+mkdir motorola
+fi
+cd && cp -r faceunlock dp/external/motorola/faceunlock
 #git clone https://github.com/PixelExperience/external_motorola_faceunlock -b ten external/motorola/faceunlock
 cd dp
 cd vendor/aosip
