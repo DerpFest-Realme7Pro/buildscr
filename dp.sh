@@ -130,8 +130,8 @@ then
 echo -e "$blue// Picking commits of Settings //$nocol"
 cd pac*/apps/Settings
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_Settings ten
-git cherry-pick 185d989450e8a5da0ca164e3e08f3bdce5fc0d75
-git cherry-pick 5a3a6ed13cf69b5efd177f5b5baa56245e81485c
+#git cherry-pick af1e4c66fef50c675ac532caa71f1f3f6a9c7b58
+git cherry-pick ebdba2a99b512ff870bd5e946bb9357a22f21739
 git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_Settings HEAD:ten2
 cd ../../..
 echo " "
@@ -159,7 +159,7 @@ then
 echo -e "$blue// Picking commits of vendor/aosip //$nocol"
 cd vendor/aosip
 git fetch https://github.com/DerpFest-Sanders/platform_vendor_aosip ten
-git cherry-pick 3f1d31a4219390b9b09f8fab33308c89e0db4d0b
+git cherry-pick 626d2a6278b5b55db8a14e567660c89b75922e92
 git push -f https://github.com/DerpFest-Sanders/platform_vendor_aosip HEAD:ten2
 cd ../..
 echo " "
