@@ -131,7 +131,7 @@ echo -e "$blue// Picking commits of Settings //$nocol"
 cd pac*/apps/Settings
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_Settings ten
 #git cherry-pick af1e4c66fef50c675ac532caa71f1f3f6a9c7b58
-git cherry-pick ebdba2a99b512ff870bd5e946bb9357a22f21739
+git cherry-pick 6616745020095024164bf7b31c2f6d0771d1ba3a
 git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_Settings HEAD:ten2
 cd ../../..
 echo " "
