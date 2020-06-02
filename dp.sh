@@ -86,8 +86,8 @@ then
 echo -e "$blue// Picking commits of DerpQuest //$nocol"
 cd pac*/apps/DerpQuest
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest ten
-git cherry-pick d5d2fc43d599913e8efc4b2825c47f6084a0f2a4
-git cherry-pick 9ee686840dee7a16a5ff52ec9df77acba21d0826
+git cherry-pick 0ef34962b2180f0f69ddc9c65320d21b61c0c2ee
+git cherry-pick ebc56621117aed56f46857bf76a15f87541bffd3
 git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest HEAD:ten2
 cd ../../..
 echo " "
