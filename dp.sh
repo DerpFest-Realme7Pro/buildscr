@@ -70,9 +70,9 @@ then
 echo -e "$blue// Picking commits of frameworks/base //$nocol"
 cd frameworks/base
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base ten
-git cherry-pick 96d788602d2894c158c529dba800fa00e751df29
-git cherry-pick 8135d0a9479af030d36ce21ac6a34a7d13b11cfa
-git cherry-pick 541ae8cd9b1f23f4a40a007af775c7c801dd44d1
+git cherry-pick 4aa22ca70637160a9b90db7aea7161cfa713751f
+git cherry-pick bf86bea20bfba3debd42dd4437c599632e65b81e
+git cherry-pick 1af9eb8d8054c20426706ab290e0df4085b67e5c
 git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
 cd ../..
 echo " "
@@ -86,8 +86,8 @@ then
 echo -e "$blue// Picking commits of DerpQuest //$nocol"
 cd pac*/apps/DerpQuest
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest ten
-git cherry-pick 0ef34962b2180f0f69ddc9c65320d21b61c0c2ee
-git cherry-pick ebc56621117aed56f46857bf76a15f87541bffd3
+git cherry-pick b8668d04416a753cdab479228acab35b07a061d3
+git cherry-pick 06d53bb9057e4912881c3bad3d57f25b2282495b
 git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest HEAD:ten2
 cd ../../..
 echo " "
