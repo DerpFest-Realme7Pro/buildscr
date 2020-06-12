@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf one two three four five six seven eight nine
+rm -rf one two three four five six seven eight nine ten
 
 # Abort on errors
 set -e
@@ -11,7 +11,7 @@ yellow='\033[0;33m'
 red='\033[0;31m'
 nocol='\033[0m'
 
-read -e -p "Do you want to sync source?;[y/n] " ans0;
+read -e -p "Do you want to sync source?[y/n]: " ans0;
 
 case $ans0 in
    y|Y)
@@ -36,7 +36,8 @@ echo "6. Pick commits of vendor/pixelstyle"
 echo "7. Pick commits of vendor/aosip"
 echo "8. Pick commits of OmniStyle"
 echo "9. Import FaceUnlock feature"
-echo "10. Pick commits of every repo above"
+echo "10. Sepolicy-legacy-um from PE"
+echo "11. Pick commits of every repo above"
 read -e -p "Select anyone from above: " ans;
 
 case $ans in
@@ -59,7 +60,9 @@ case $ans in
    9)
 	mkdir nine;;
    10)
-	mkdir one two three four five six seven eight nine;;
+        mkdir ten;;
+   11)
+	mkdir one two three four five six seven eight nine ten;;
 esac
 
 
@@ -214,6 +217,16 @@ cd ../..
 echo " "
 echo " "
 rm -rf nine
+fi
+
+if [ -e ten ]
+then
+echo -e "$blue// sepolicy-legavy-um from PE //$nocol"
+rm -rf device/qcom/sepolicy-legacy-um
+git clone  https://github.com/PixelExperience/device_qcom_sepolicy-legacy-um device/qcom/sepolicy-legacy-um
+echo " "
+echo " "
+rm -rf ten
 fi
 
 echo " "
