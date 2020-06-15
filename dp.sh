@@ -231,3 +231,5 @@ fi
 
 echo " "
 echo -e "$cyan// Picked stuffs from DerpFest-Sanders //$nocol"
+
+. builds*/dp*
