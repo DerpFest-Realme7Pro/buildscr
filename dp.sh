@@ -2,7 +2,7 @@
 rm -rf one two three four five six seven eight nine ten
 
 # Abort on errors
-set -e
+#set -e
 
 BUILD_START=$(date +"%s")
 blue='\033[0;34m'
@@ -87,7 +87,7 @@ then
 echo -e "$blue// Picking commits of DerpQuest //$nocol"
 cd pac*/apps/DerpQuest
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest new4
-git cherry-pick 89d788efe1e38d4d6094b818fd29efaece6c3802^..2e25a71be6103f3145d2c67a7e94a755d709813c
+git cherry-pick 1a20e63fccd25b399b3db3f9df0bac159d8a3e19^..5fa05bccb6a7fc4db4a2b8b0484e53d807ff96c5
 git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest HEAD:ten2
 cd ../../..
 echo " "
