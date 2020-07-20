@@ -72,8 +72,8 @@ if [ -e one ]
 then
 echo -e "$blue// Picking commits of frameworks/base //$nocol"
 cd frameworks/base
-git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base clock2
-git cherry-pick ae1866710d2328a6fc01255a602d912b3f83b1b6^..1e986e2b0d5190ba92e86aa418081ed559418808
+git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base clock4
+git cherry-pick b1c101776a697b67a3fd509a88ecf7a23a3612e7^..05e2d7bee5e0e86684d7e64a1310bd088cbd5175
 git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
 cd ../..
 echo " "
@@ -86,8 +86,8 @@ if [ -e two ]
 then
 echo -e "$blue// Picking commits of DerpQuest //$nocol"
 cd pac*/apps/DerpQuest
-git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest new4
-git cherry-pick df2223a1fb1bf63701b12ba017a0d18efe77ccce^..f7b4edc2cf3a6736299d9b2dd8451de84bc4c6f5
+git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest new5
+git cherry-pick fb873887b74ad489907569db22aa255b9f5f32c4^..c1b3edc057a1885d254deae4b6426f169761620c
 git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest HEAD:ten2
 cd ../../..
 echo " "
@@ -115,7 +115,7 @@ then
 echo -e "$blue// Picking commits of vendor/overlay //$nocol"
 cd vendor/overlay
 git fetch https://github.com/DerpFest-Sanders/platform_vendor_overlay ten
-git cherry-pick c425885cbeb5d9c9e21694aa351e5b6a133efe04
+#git cherry-pick c425885cbeb5d9c9e21694aa351e5b6a133efe04
 git cherry-pick 5d8a1215c40bbc2b95c393e6d02735eb03487583
 git push -f https://github.com/DerpFest-Sanders/platform_vendor_overlay HEAD:ten2
 cd ../..
