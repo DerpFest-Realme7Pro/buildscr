@@ -37,8 +37,7 @@ echo "7. Pick commits of vendor/aosip"
 echo "8. Pick commits of OmniStyle"
 echo "9. Import FaceUnlock feature"
 echo "10. Sepolicy-legacy-um from PE"
-echo "11. Remove RGB accent picker"
-echo "12. Pick commits of every repo above"
+echo "11. Pick commits of every repo above"
 read -e -p "Select anyone from above: " ans;
 
 case $ans in
@@ -62,10 +61,10 @@ case $ans in
 	mkdir nine;;
    10)
         mkdir ten;;
+#   11)
+#        mkdir eleven;;
    11)
-        mkdir eleven;;
-   12)
-	mkdir one two three four five six seven eight nine ten eleven;;
+	mkdir one two three four five six seven eight nine ten;;
 esac
 
 
@@ -229,35 +228,35 @@ echo " "
 rm -rf ten
 fi
 
-if [ -e eleven ]
-then
-echo -e "$blue// Removing RGB accent picker //$nocol"
-cd f*/base
-git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base rmrgb
-git cherry-pick -s d1a43abc879c1f9fb35b4f0dfe7be3dde10ce084^..66b10fc5179e6bd6631c26c9b2a5acff005cccb3
-git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base ten2
-cd ../..
-cd pac*/apps/Derp*
-git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest rmrgb
-git cherry-pick -s 969a6277805edb78c64fb74888c7b336f7201ab0^..3a9ccea03ef0843085ff5405f8624f0639a53028
-git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest HEAD:ten2
-cd ../..
-cd pac*/apps/ThemePicker
-git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_ThemePicker rmrgb
-git cherry-pick -s f836a0c96119210f7ef4b2a1b4110dfa5aabd096
-git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_ThemePicker HEAD:ten2
-cd ../../..
-cd vendor/overlay
-git fetch https://github.com/DerpFest-Sanders/platform_vendor_overlay rmrgb
-git cherry-pick -s 74b2ca1f8e2856cc922b5df28e5d56cfa7d23840
-git push -f https://github.com/DerpFest-Sanders/platform_vendor_overlay HEAD:ten2
-cd ../..
-cd device/aosip/sepolicy
-git fetch https://github.com/DerpFest-Sanders/device_aosip_sepolicy-1 rmrgb
-git cherry-pick -s 30fefa43647c2f9aa06b82d18ff2138fcbbdced9
-git push -f https://github.com/DerpFest-Sanders/device_aosip_sepolicy-1 HEAD:ten2
-cd ../../..
-fi
+#if [ -e eleven ]
+#then
+#echo -e "$blue// Removing RGB accent picker //$nocol"
+#cd f*/base
+#git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base rmrgb
+#git cherry-pick -s d1a43abc879c1f9fb35b4f0dfe7be3dde10ce084^..66b10fc5179e6bd6631c26c9b2a5acff005cccb3
+#git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base ten2
+#cd ../..
+#cd pac*/apps/Derp*
+#git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest rmrgb
+#git cherry-pick -s 969a6277805edb78c64fb74888c7b336f7201ab0^..3a9ccea03ef0843085ff5405f8624f0639a53028
+#git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest HEAD:ten2
+#cd ../..
+#cd pac*/apps/ThemePicker
+#git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_ThemePicker rmrgb
+#git cherry-pick -s f836a0c96119210f7ef4b2a1b4110dfa5aabd096
+#git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_ThemePicker HEAD:ten2
+#cd ../../..
+#cd vendor/overlay
+#git fetch https://github.com/DerpFest-Sanders/platform_vendor_overlay rmrgb
+#git cherry-pick -s 74b2ca1f8e2856cc922b5df28e5d56cfa7d23840
+#git push -f https://github.com/DerpFest-Sanders/platform_vendor_overlay HEAD:ten2
+#cd ../..
+#cd device/aosip/sepolicy
+#git fetch https://github.com/DerpFest-Sanders/device_aosip_sepolicy-1 rmrgb
+#git cherry-pick -s 30fefa43647c2f9aa06b82d18ff2138fcbbdced9
+#git push -f https://github.com/DerpFest-Sanders/device_aosip_sepolicy-1 HEAD:ten2
+#cd ../../..
+#fi
 
 echo " "
 echo -e "$cyan// Picked stuffs from DerpFest-Sanders //$nocol"
