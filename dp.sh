@@ -74,8 +74,8 @@ if [ -e one ]
 then
 echo -e "$blue// Picking commits of frameworks/base //$nocol"
 cd frameworks/base
-git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base clock4
-git cherry-pick b1c101776a697b67a3fd509a88ecf7a23a3612e7^..05e2d7bee5e0e86684d7e64a1310bd088cbd5175
+git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base clock5
+git cherry-pick e19a1a43a63c6e78ee292086a964f622e0b35eff^..e69cf9d4d4cf58d9bc3a67399a713ff9951f88f1
 git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
 cd ../..
 echo " "
