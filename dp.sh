@@ -1,6 +1,14 @@
 #!/bin/bash
 rm -rf one two three four five six seven eight nine ten
 
+if [ -e ~/faceunlock ]; then
+   echo ""
+else
+   echo "Clone faceunlock and rerun script"
+   sleep 3
+   exit
+fi
+
 # Abort on errors
 set -e
 
