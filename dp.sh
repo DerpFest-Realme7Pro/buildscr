@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf one two three four five six seven eight nine ten
+rm -rf one two three four five six seven eight nine ten eleven
 
 if [ -e ~/faceunlock ]; then
    echo ""
@@ -45,7 +45,8 @@ echo "7. Pick commits of vendor/aosip"
 echo "8. Pick commits of OmniStyle"
 echo "9. Import FaceUnlock feature"
 echo "10. Sepolicy-legacy-um from PE"
-echo "11. Pick commits of every repo above"
+echo "11. Import USAP Zygote"
+echo "12. Pick commits of every repo above"
 read -e -p "Select anyone from above: " ans;
 
 case $ans in
@@ -69,10 +70,10 @@ case $ans in
 	mkdir nine;;
    10)
         mkdir ten;;
-#   11)
-#        mkdir eleven;;
    11)
-	mkdir one two three four five six seven eight nine ten;;
+        mkdir eleven;;
+   12)
+	mkdir one two three four five six seven eight nine ten eleven;;
 esac
 
 
@@ -84,11 +85,12 @@ echo -e "$blue// Picking commits of frameworks/base //$nocol"
 cd frameworks/base
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base clock5
 git cherry-pick e19a1a43a63c6e78ee292086a964f622e0b35eff^..e69cf9d4d4cf58d9bc3a67399a713ff9951f88f1
-git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
+#git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
 cd ../..
 echo " "
 echo " "
 rm -rf one
+sleep 2
 fi
 
 ## DerpQuest
@@ -96,8 +98,8 @@ if [ -e two ]
 then
 echo -e "$blue// Picking commits of DerpQuest //$nocol"
 cd pac*/apps/DerpQuest
-git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest new5
-git cherry-pick d9bc14db704d79a20f52083369422edcb3c55021^..01ede496ca7716d31f569a28beec55466334cdb6
+git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest new6
+git cherry-pick 37509d503bd2c3aa7b5d8c04bbf81949040d04b7^..e7967c4aa86d0dafac8b38bbbb2da54c1c32259c
 git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest HEAD:ten2
 cd ../../..
 echo " "
@@ -219,8 +221,9 @@ cd ../../..
 cd frameworks/base
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base face
 git cherry-pick 48a251855a7ba1105e0e77412ed8fa3c815e829a
-git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
+#git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
 cd ../..
+sleep 2
 echo " "
 echo " "
 rm -rf nine
@@ -234,6 +237,23 @@ git clone  https://github.com/PixelExperience/device_qcom_sepolicy-legacy-um dev
 echo " "
 echo " "
 rm -rf ten
+fi
+
+if [ -e eleven ]
+then
+echo -e "$blue// Importing USAP Zygote //$nocol"
+cd frame*/base
+git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base usap
+git cherry-pick a0dde10b22d60cc1587be68cb1370039620e5ed0^..a8eedaa2898e8d562b057dbddc1a6b60c55c78f1
+#git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
+cd ../..
+sleep 2
+cd system/core
+git fetch https://github.com/DerpFest-Sanders/platform_system_core usap
+git cherry-pick 01d3e8cfd222f20e83b5778f9fe3887c587023a4
+git push -f https://github.com/DerpFest-Sanders/platform_system_core HEAD:ten2
+cd ../..
+rm -rf eleven
 fi
 
 #if [ -e eleven ]
