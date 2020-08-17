@@ -86,6 +86,8 @@ cd frameworks/base
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base clock5
 git cherry-pick e19a1a43a63c6e78ee292086a964f622e0b35eff^..e69cf9d4d4cf58d9bc3a67399a713ff9951f88f1
 #git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
+git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base bubble
+git cherry-pick 440d11b109b4694a8416e3a93709cc8cf95c6aac^..4026ebb33bd5be83715128285e9312324d38bb53
 cd ../..
 echo " "
 echo " "
@@ -99,7 +101,7 @@ then
 echo -e "$blue// Picking commits of DerpQuest //$nocol"
 cd pac*/apps/DerpQuest
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest new6
-git cherry-pick 37509d503bd2c3aa7b5d8c04bbf81949040d04b7^..e7967c4aa86d0dafac8b38bbbb2da54c1c32259c
+git cherry-pick 6a76975bfe0127f4c9ab1d0a4e31f909d23897c4^..808b6fd8674cc56cc25541f1c53a38583c3dc9f3
 git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest HEAD:ten2
 cd ../../..
 echo " "
@@ -222,6 +224,8 @@ cd frameworks/base
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base face
 git cherry-pick 48a251855a7ba1105e0e77412ed8fa3c815e829a
 #git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
+git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base bubble
+git cherry-pick def16d20d16f72e53c75a05b45837617d64743d6^..ccc8989e19b149637789f020931e2e9816f662e0
 cd ../..
 sleep 2
 echo " "
