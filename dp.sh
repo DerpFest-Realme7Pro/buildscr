@@ -86,8 +86,9 @@ cd frameworks/base
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base clock5
 git cherry-pick e19a1a43a63c6e78ee292086a964f622e0b35eff^..e69cf9d4d4cf58d9bc3a67399a713ff9951f88f1
 #git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
-git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base bubble
-git cherry-pick 440d11b109b4694a8416e3a93709cc8cf95c6aac^..4026ebb33bd5be83715128285e9312324d38bb53
+git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base 404
+git cherry-pick c7b9cb7141a34a15ca745595ed628f618a0d889f^..e950c67032488ee5a07e606ddf9a265eb25baca5
+git cherry-pick e4daef94c538ae03de6684eb0440c29733d86673^..725315eb032d3f85acd5a82c189323a03501199e
 cd ../..
 echo " "
 echo " "
@@ -228,6 +229,8 @@ git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base bubble
 git cherry-pick def16d20d16f72e53c75a05b45837617d64743d6^..ccc8989e19b149637789f020931e2e9816f662e0
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base face-new
 git cherry-pick b04cac56c692b716977689aad220683c294edd2b^..afd52340ae189dd470efb57184ba49bf72becb57
+git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base 404
+git cherry-pick 24ad41156e7e0437c0e731d9d6e05926946a10ec^..57f6e12255fc7aa53a38c9047ac77f9b7bd849d0
 cd ../..
 sleep 2
 echo " "
