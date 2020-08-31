@@ -229,11 +229,9 @@ git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base face
 git cherry-pick 48a251855a7ba1105e0e77412ed8fa3c815e829a
 #git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base bubble
-git cherry-pick def16d20d16f72e53c75a05b45837617d64743d6^..ccc8989e19b149637789f020931e2e9816f662e0
+git cherry-pick def16d20d16f72e53c75a05b45837617d64743d6
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base face-new
 git cherry-pick b04cac56c692b716977689aad220683c294edd2b^..afd52340ae189dd470efb57184ba49bf72becb57
-git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base 404-2
-git cherry-pick 7507597c6aba28c8a99e5c9b5f7cbd2f6dd82b26
 cd ../..
 sleep 2
 echo " "
