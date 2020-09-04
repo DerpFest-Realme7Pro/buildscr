@@ -92,6 +92,8 @@ git cherry-pick e4daef94c538ae03de6684eb0440c29733d86673^..725315eb032d3f85acd5a
 git cherry-pick aba679aa334783f07bd94709247126fae120a625
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base 404-2
 git cherry-pick db3b6de2571f9e995c19d00dea5b6ca47a23be08
+git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base fp2
+git cherry-pick 5ce9197f1b54cf9c70b4cb7544f4c26329cebf37^..9fa588395bb6a090389c2ef1ad116c87274db2e3
 cd ../..
 echo " "
 echo " "
@@ -106,6 +108,8 @@ echo -e "$blue// Picking commits of DerpQuest //$nocol"
 cd pac*/apps/DerpQuest
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest new6
 git cherry-pick 6a76975bfe0127f4c9ab1d0a4e31f909d23897c4^..808b6fd8674cc56cc25541f1c53a38583c3dc9f3
+git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest fod
+git cherry-pick 5ba0c4324f077845d177a4a89479efd868d96b30^..45762068d7fb8db243a301302e485b3e18c0998c
 git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest HEAD:ten2
 cd ../../..
 echo " "
@@ -150,10 +154,11 @@ cd pac*/apps/Settings
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_Settings ten
 #git cherry-pick af1e4c66fef50c675ac532caa71f1f3f6a9c7b58
 git cherry-pick 6616745020095024164bf7b31c2f6d0771d1ba3a
-git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_Settings HEAD:ten2
+#git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_Settings HEAD:ten2
 cd ../../..
 echo " "
 echo " "
+sleep 3
 rm -rf five
 fi
 
@@ -170,6 +175,14 @@ echo " "
 echo " "
 rm -rf six
 fi
+
+echo -e "$blue// Picking commit of PotatoPlugins //$nocol"
+cd pac*/apps/Potato*
+git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_PotatoPlugins tan
+git cherry-pick 1504ecfd8cfa49aa793325e617a28b0b6df9184f
+cd ../../..
+echo " "
+echo " "
 
 ## vendor/aosip
 if [ -e seven ]
@@ -222,8 +235,9 @@ cd ../..
 cd pac*/apps/Settings
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_Settings face
 git cherry-pick 9341795c8b2eb4b292a7f12ccb473c2c47b791e1
-git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_Settings HEAD:ten2
+#git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_Settings HEAD:ten2
 cd ../../..
+sleep 3
 cd frameworks/base
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base face
 git cherry-pick 48a251855a7ba1105e0e77412ed8fa3c815e829a
@@ -264,6 +278,8 @@ git cherry-pick 01d3e8cfd222f20e83b5778f9fe3887c587023a4
 git push -f https://github.com/DerpFest-Sanders/platform_system_core HEAD:ten2
 cd ../..
 rm -rf eleven
+echo " "
+echo " "
 fi
 
 #if [ -e eleven ]
