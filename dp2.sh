@@ -83,17 +83,25 @@ if [ -e one ]
 then
 echo -e "$blue// Picking commits of frameworks/base //$nocol"
 cd frameworks/base
-git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base clock5
-git cherry-pick e19a1a43a63c6e78ee292086a964f622e0b35eff^..e69cf9d4d4cf58d9bc3a67399a713ff9951f88f1
-#git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
-git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base 404
-git cherry-pick c7b9cb7141a34a15ca745595ed628f618a0d889f^..e950c67032488ee5a07e606ddf9a265eb25baca5
-git cherry-pick e4daef94c538ae03de6684eb0440c29733d86673^..725315eb032d3f85acd5a82c189323a03501199e
-git cherry-pick aba679aa334783f07bd94709247126fae120a625
-git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base 404-2
-git cherry-pick db3b6de2571f9e995c19d00dea5b6ca47a23be08
 git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base fp2
-git cherry-pick 5ce9197f1b54cf9c70b4cb7544f4c26329cebf37^..9fa588395bb6a090389c2ef1ad116c87274db2e3
+# OOS dismiss all
+git cherry-pick fe4597c932814f829e3c9ff054b341f4a44191d6^..5bb88ca5ce0fd5385d25cd21266402de8111aa04
+# New clocks
+git cherry-pick 448602c92eca13f1a599cb276b5d87600115c1e6^..53b0989940e7dec512443c0cd642689c913ea391
+# brightness +- icons
+git cherry-pick 9b2e6f5b2abdec3910bc041267e83264dfef349f
+# fast fp
+git cherry-pick 9811688a8323512286f385a2446d61fa57831357 #remove keyguard delay completely
+git cherry-pick 72321ba13fa8dd1c943d728b4e089b6a65bc1f3d #skip screen on animtaion
+git cherry-pick 94760b652324a00d5bdfa17cf60aca1cdbee9392 #kill some ls related animation
+git cherry-pick 6f56f6636056c18c81ac8b7000ef88f9e6fe8aa4 #SystemUI: use fp MODE_UNLOCK when pulsing or aod
+# remove extra fod animations
+git cherry-pick 5ce9197f1b54cf9c70b4cb7544f4c26329cebf37^..c34e5a43a2c96943be611dbc826d099400e94452
+#NotificationPanelView: Fix initial touch co-ordinates
+git cherry-pick 16c253fec36344d3a2b706b17399fe22b0287e6a
+# tweak navbar
+git cherry-pick 2b1d259c8001c2e4608f398712f51afea2c00fef
+git chrrry-pick 9fa588395bb6a090389c2ef1ad116c87274db2e3
 cd ../..
 echo " "
 echo " "
@@ -239,13 +247,10 @@ git cherry-pick 9341795c8b2eb4b292a7f12ccb473c2c47b791e1
 cd ../../..
 sleep 3
 cd frameworks/base
-git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base face
-git cherry-pick 48a251855a7ba1105e0e77412ed8fa3c815e829a
-#git push -f https://github.com/DerpFest-Sanders/platform_frameworks_base HEAD:ten2
-git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base bubble
-git cherry-pick def16d20d16f72e53c75a05b45837617d64743d6
-git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base face-new
-git cherry-pick b04cac56c692b716977689aad220683c294edd2b^..afd52340ae189dd470efb57184ba49bf72becb57
+git fetch https://github.com/DerpFest-Sanders/platform_frameworks_base fp2
+git cherry-pick ca87df56b575e3f2f143c250cf27dc3c7b526dce #port faceunlock
+git cherry-pick 1337ccd83f6cb62374d211e38de4ddac490ac9d1 #guard some functions
+git cherry-pick 455081662cba344ebe7abdec3b7fbe77feda5423 #ls improvement
 cd ../..
 sleep 2
 echo " "
