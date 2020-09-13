@@ -102,13 +102,14 @@ git cherry-pick 5ce9197f1b54cf9c70b4cb7544f4c26329cebf37^..c34e5a43a2c96943be611
 # tweak navbar
 git cherry-pick 2b1d259c8001c2e4608f398712f51afea2c00fef
 git cherry-pick 9fa588395bb6a090389c2ef1ad116c87274db2e3
+git cherry-pick 9d1cb84bb4c74b0b860612a7ad9d42dae87190b4
 # disco
-git cherry-pick 264bb2754ff0341b089c89628bcb8dd264f024c8^..84dde51395754f2e6fdb24408812194a0ffbc68d
-git cherry-pick e69018a249ffe7de2f63d010d0d8e14ad4cd7d57
+#git cherry-pick 264bb2754ff0341b089c89628bcb8dd264f024c8^..84dde51395754f2e6fdb24408812194a0ffbc68d
+#git cherry-pick e69018a249ffe7de2f63d010d0d8e14ad4cd7d57
 # optimize plugins
 git cherry-pick 6b158442c4363482956feca189f8b162d916e591
 # enable animation
-git cherry-pick 3a260ae5deaa0582f8247df07fcb95f1cab31edb
+#git cherry-pick 3a260ae5deaa0582f8247df07fcb95f1cab31edb
 cd ../..
 echo " "
 echo " "
@@ -125,10 +126,11 @@ git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest n
 git cherry-pick 6a76975bfe0127f4c9ab1d0a4e31f909d23897c4^..808b6fd8674cc56cc25541f1c53a38583c3dc9f3
 git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest fod
 git cherry-pick 5ba0c4324f077845d177a4a89479efd868d96b30^..45762068d7fb8db243a301302e485b3e18c0998c
-git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest fod
-git cherry-pick 87cffc170034ec77de26e90debc6e689695bde19
-git cherry-pick 78b025f52129ab0578b510048eee8d02bc4575c3
-git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest HEAD:ten2
+# disco
+#git fetch https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest fod
+#git cherry-pick 87cffc170034ec77de26e90debc6e689695bde19
+#git cherry-pick 78b025f52129ab0578b510048eee8d02bc4575c3
+#git push -f https://github.com/DerpFest-Sanders/platform_packages_apps_DerpQuest HEAD:ten2
 cd ../../..
 echo " "
 echo " "
